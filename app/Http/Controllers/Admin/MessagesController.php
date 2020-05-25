@@ -9,7 +9,7 @@ class MessagesController extends Controller
 {
     public function index()
     {
-        $messages = Message::latest()->paginate(2);
+        $messages = Message::latest()->paginate(5);
         return view('admin.messages.index', compact('messages'));
     }
 }

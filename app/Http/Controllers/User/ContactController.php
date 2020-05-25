@@ -4,6 +4,8 @@ namespace App\Http\Controllers\User;
 use App\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 
 class ContactController extends Controller
 {
@@ -29,6 +31,9 @@ class ContactController extends Controller
             'message'  => $request->message,
 
         ]);
+
+        Mail::to('eslamtaher333@yahoo.com')->send(new ContactFormMail($request));
+
         return redirect()->back()->with('message','your message has been sent');
     }
 }

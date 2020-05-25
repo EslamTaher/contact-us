@@ -51,7 +51,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-       
+        <div class="card-body">
+          @if (session('status'))
+              <div class="alert alert-success" role="alert">
+                  {{ session('status') }}
+              </div>
+          @endif
+
+         <p class="text-white">You are logged in!</p> 
+      </div>
       </div>
 
       <!-- Sidebar Menu -->

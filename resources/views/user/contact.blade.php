@@ -38,7 +38,7 @@
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea class="form-control" id="message" name="message" value="{{ old('message')}}" required></textarea>
+          <textarea class="form-control" cols="25" rows="8" id="message" name="message" value="{{ old('message')}}" required></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary mb-5">Send message</button>
